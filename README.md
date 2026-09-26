@@ -46,11 +46,13 @@ Windows:
 
 ```powershell
 cd plugin
-gradlew.bat buildPlugin
+gradlew.bat buildPlugin```
 
 macOS/Linux:
+
+```powershell
 cd plugin
-./gradlew buildPlugin
+./gradlew buildPlugin```
 
 The generated plugin ZIP can be found in:
-plugin/build/distributions/
+`plugin/build/distributions/`
