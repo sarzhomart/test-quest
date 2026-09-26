@@ -131,11 +131,3 @@ wrapper.
 
 Levels contain 100 XP. Point values are calculated locally; values returned by
 Gemini are ignored.
-
-## Production hardening after the MVP
-
-Before marketplace release, add telemetry only with explicit consent, run the
-JetBrains Plugin Verifier against every supported IDE build, add integration
-fixtures for Maven/JUnit 4 and Gradle/JUnit 5, and sign/publish through CI.
-For stronger semantic coverage validation, JaCoCo line/branch deltas can be
-added as another deterministic validation rule.
