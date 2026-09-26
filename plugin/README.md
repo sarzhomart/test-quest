@@ -13,7 +13,7 @@ The MVP declares IntelliJ IDEA build compatibility 243–262 (including
 IU-262.10968.63), Java 17+ bytecode,
 JUnit-based Java tests, and Gradle or Maven projects.
 
-Version 0.1.4 also schedules document saving from the quest generation and
+It also schedules document saving from the quest generation and
 verification buttons in an IntelliJ write-safe application context, as required
 by the build 262 threading model. Run the plugin in IDEA build 262 and use
 JetBrains Plugin Verifier before publishing it. The available development
