@@ -43,7 +43,7 @@ intellijPlatform {
             untilBuild = "262.*"
         }
         changeNotes = """
-            <p>Version 0.1.9: capture after Selenium driver commands and show
+            <p>Version 0.1.11: capture after Selenium driver commands and show
             hook and snapshot diagnostics in the test console.</p>
         """.trimIndent()
     }
