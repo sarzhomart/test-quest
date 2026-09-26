@@ -1,0 +1,59 @@
+<idea-plugin>
+    <id>com.testquest.intellij</id>
+    <name>Test Quest</name>
+    <version>0.1.11</version>
+    <vendor>Test Quest</vendor>
+    <idea-version since-build="243" until-build="262.*"/>
+    <description><![CDATA[
+        Gamified learning for Selenium test automation. Generates actionable
+        locator, coverage, and behavioral quests from test code and DOM snapshots,
+        then verifies them deterministically before awarding points.
+    ]]></description>
+    <change-notes><![CDATA[
+        Version 0.1.11 isolates the snapshot agent's Byte Buddy classes from
+        other versions on the Selenium test classpath, so Java 17 classes can
+        be read even when the test project depends on an older Byte Buddy.
+        Version 0.1.10 captures Selenium commands through RemoteWebDriver
+        without transforming RemoteWebElement, which failed on some Java 17
+        test classpaths. Driver hook failures now include their stack trace.
+        Version 0.1.9 also observes Selenium driver commands for snapshot
+        capture and reports hook installation, page source failures, and the
+        first saved HTML path in the JUnit console.
+        Version 0.1.8 fixes a binary incompatibility that prevented the Test
+        Quest tool window from showing its content in version 0.1.7.
+        Version 0.1.7 displays XP progress in a theme-aware label below the
+        bar so the text remains readable before the bar fills.
+        Version 0.1.6 refreshes the bundled snapshot agent when it changes.
+        The JUnit test console now confirms agent startup and reports the first
+        snapshot capture failure, making missing snapshots diagnosable.
+        Version 0.1.5 stores each Gemini request, raw response, and generated
+        tasks JSON under .testquest/llm/ in the opened test project. Coverage
+        validation accepts a new test method with different whitespace,
+        annotations, or a throws clause while still running the named test.
+        Fixed document saving from the Get 3 quests and Verify selected buttons
+        on IntelliJ IDEA build 262 by scheduling it in a write-safe application
+        context before starting background work.
+        Added support metadata for IntelliJ IDEA builds 262.* (including
+        IU-262.10968.63), retaining support for builds 243 through 261.
+        Quest verification now targets the exact requested JUnit test method.
+        Coverage quests run the newly added method, while locator and behavioral
+        quests run the named existing method. Older saved quests remain compatible
+        and fall back to class-level verification.
+    ]]></change-notes>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.java</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow
+                id="Test Quest"
+                anchor="right"
+                icon="/icons/testQuest.svg"
+                factoryClass="com.testquest.ui.TestQuestToolWindowFactory"/>
+        <runConfigurationExtension implementation="com.testquest.snapshot.SnapshotRunConfigurationExtension"/>
+        <notificationGroup
+                id="Test Quest"
+                displayType="BALLOON"
+                isLogByDefault="true"/>
+    </extensions>
+</idea-plugin>

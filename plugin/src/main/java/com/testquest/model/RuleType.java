@@ -1,0 +1,12 @@
+package com.testquest.model;
+
+public enum RuleType {
+    FILE_CHANGED,
+    REGEX_PRESENT,
+    REGEX_ABSENT,
+    FULL_XPATH_REPLACED,
+    TEST_COUNT_INCREASED,
+    ASSERTION_COUNT_INCREASED,
+    LOCATOR_UNIQUELY_MATCHES
+}
+
