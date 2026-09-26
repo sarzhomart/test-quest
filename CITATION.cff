@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use Test Quest or its replication package, please cite this repository."
+
+title: "Test Quest: IntelliJ IDEA Plugin and Thesis Replication Package"
+type: software
+
+authors:
+  - family-names: Talgatkyzy
+    given-names: Arailym
+
+version: "0.1.11"
+date-released: "2026-09-26"
+
+repository-code: "https://github.com/sarzhomart/test-quest"
+url: "https://github.com/sarzhomart/test-quest"
+
+abstract: >
+  Test Quest is an IntelliJ IDEA plugin for gamifying Selenium test
+  improvement using contextual LLM-generated quests. This repository
+  contains the plugin source code, documentation, and replication
+  artifacts used in the experimental evaluation of the associated
+  master's thesis.
+
+keywords:
+  - Selenium
+  - test automation
+  - gamification
+  - IntelliJ IDEA
+  - large language models
+  - software testing
+  - replication package
