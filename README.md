@@ -40,14 +40,10 @@ the BEWT repository.
 
 See `THIRD_PARTY_NOTICES.md`.
 
-## Building
+## Installation
 
-For installation, configuration, usage, and architecture details, see
+Pre-built plugin packages are available from the
+[GitHub Releases](https://github.com/sarzhomart/test-quest/releases) page.
+
+For additional configuration, build, usage, and architecture details, see
 [`plugin/README.md`](plugin/README.md).
-
-
-The generated plugin ZIP can be found in:
-
-```text
-plugin/build/distributions/
-```
