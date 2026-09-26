@@ -42,21 +42,9 @@ See `THIRD_PARTY_NOTICES.md`.
 
 ## Building
 
-## Building
+For installation, configuration, usage, and architecture details, see
+[`plugin/README.md`](plugin/README.md).
 
-### Windows
-
-```powershell
-cd plugin
-gradlew.bat buildPlugin
-```
-
-### macOS / Linux
-
-```bash
-cd plugin
-./gradlew buildPlugin
-```
 
 The generated plugin ZIP can be found in:
 
