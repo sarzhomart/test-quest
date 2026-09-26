@@ -38,24 +38,71 @@ task passed. Every generated task is converted into a local validation contract:
 
 If any check fails, no state or points are changed.
 
-## Build and install
+## Installation
 
-Requirements: JDK 17 and internet access for the first Gradle dependency
-download.
+Pre-built Test Quest plugin packages are available on the
+[GitHub Releases](https://github.com/sarzhomart/test-quest/releases) page.
+
+To install the plugin:
+
+1. Open the GitHub Releases page.
+2. Download the required plugin version, for example:
+
+   `test-quest-0.1.11.zip`
+
+3. Open IntelliJ IDEA.
+4. Go to:
+
+   `Settings → Plugins → ⚙ → Install Plugin from Disk`
+
+5. Select the downloaded ZIP file.
+6. Restart IntelliJ IDEA if required.
+
+## Building from Source
+
+To build Test Quest from source, clone or download this repository and open the `plugin` directory.
+
+### Windows
+
+```powershell
+cd plugin
+gradlew.bat clean test buildPlugin
+```
+
+### macOS / Linux
 
 ```bash
+cd plugin
 ./gradlew clean test buildPlugin
 ```
 
-Install the ZIP from `build/distributions/` using:
+After a successful build, the generated plugin ZIP will be created locally in:
 
-`Settings → Plugins → ⚙ → Install Plugin from Disk`.
+```text
+plugin/build/distributions/
+```
 
-For development:
+The `build/distributions/` directory is generated during the build process and is therefore not stored in the GitHub repository.
+
+## Running the Plugin for Development
+
+To start a development IntelliJ IDEA instance with Test Quest installed:
+
+### Windows
+
+```powershell
+cd plugin
+gradlew.bat runIde
+```
+
+### macOS / Linux
 
 ```bash
+cd plugin
 ./gradlew runIde
 ```
+
+This launches a sandbox IntelliJ IDEA instance for plugin development and testing.
 
 ## First run
 
